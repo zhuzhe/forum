@@ -1,0 +1,21 @@
+<%= link_to "index", sections_path %>--><%= link_to @post.section.name, section_posts_path(@post.section) %>--><%= link_to @post.tittle, post_path(@post) %>
+<p>
+  <b>Tittle:</b>
+  <%=h @post.tittle %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @post.content %>
+</p>
+<% for reply in @post.replies %>
+<%div_for reply do %>
+	content:<%=  reply.content%><br>
+	author:<%= h reply.user.username%><br>
+	time:<%= h reply.created_at %><br>
+ <%end%>
+<%end %>
+<% form_for Reply.new ,:url=>post_replies_path(@post) do |f| -%>
+  <%=  f.text_area :content%><br>
+	<%= f.submit 'reply' %>
+<% end -%>

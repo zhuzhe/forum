@@ -1,0 +1,10 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  content: good
+  post: two
+  user: david
+two:
+  content: bad
+  post: one
+  user: jimi

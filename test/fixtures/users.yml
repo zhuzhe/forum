@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+david:
+  username: david
+  hash_password: qqq
+  email: david@sina.com
+  sex: male
+
+jimi:
+  username: jimi
+  hash_password: qqq    
+  email: jimi@sina.com
+  sex: female

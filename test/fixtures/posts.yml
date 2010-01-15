@@ -1,0 +1,12 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tittle: mygod
+  content: i love god
+  user: david
+  section: rails
+two:
+  tittle: little boy
+  content: i love this little boy
+  user: jimi
+  section: java

@@ -1,0 +1,20 @@
+<%= link_to "index",sections_path %>--><%=link_to @section.name, section_posts_path(@section) %> 
+<table>
+  <tr>
+    <th>Tittle</th>
+    <th>Author</th>
+	<th>Update</th>
+  </tr>
+<% unless @posts.nil? %>
+<% @posts.each do |post| %>
+  <tr>
+    <td><%=link_to post.tittle,post %></td>
+	<td><%= link_to post.user.username, user_path(post.user) %></td>
+    <td><%= post.updated_at %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+
+<br />
+

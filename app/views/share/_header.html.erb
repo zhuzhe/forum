@@ -1,0 +1,11 @@
+<div id="header">
+<%= link_to "index", sections_path %>
+<%= link_to "create blog", new_post_path %>
+<%= link_to "your posts", published_posts_path %>
+<% unless session[:user_id].nil? %>
+<%= link_to "your account", user_path(session[:user_id]) %>
+<% else %>
+ <%= link_to "Please Login", new_session_path%> 
+<% end %>
+<%= link_to "Log Out", session_path,:method=>:delete %> 
+</div>

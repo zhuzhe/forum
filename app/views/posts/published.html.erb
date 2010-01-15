@@ -1,0 +1,12 @@
+<table>
+	<th>tittle</th>
+	<th>update time</th>
+<% for post in @posts %>
+<tr>
+  <td><%= link_to post.tittle, post_path(post) %></td>
+	<td><%= h post.updated_at %></td>
+	<td><%= link_to "edit", edit_post_path(post) %></td>
+	<td><%= link_to "destroy", post_path(post) ,:method=>:delete%></td>
+</tr>
+<% end %>
+</table>

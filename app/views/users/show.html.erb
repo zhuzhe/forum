@@ -1,0 +1,19 @@
+<p>
+  <b>Username:</b>
+  <%=h @user.username %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @user.email %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%=h @user.sex %>
+</p>
+
+<% unless session[:user_id]==@user.id.to_s %>
+<%= link_to 'Edit', edit_user_path(@user) %> 
+<% end %>
+
